@@ -17,8 +17,8 @@ resource "aws_db_instance" "rds_instance" {
 }
 
 resource "aws_security_group" "rds_sg" {
-  name = "rds_sg"
-  vpc_id      = var.vpc_id
+  name   = "rds_sg"
+  vpc_id = var.vpc_id
 
   # Only MySQL in
   ingress {
@@ -28,7 +28,7 @@ resource "aws_security_group" "rds_sg" {
     cidr_blocks = var.private_subnets_eks_cidr
   }
   #Only Postgres in
-    ingress {
+  ingress {
     from_port   = 5423
     to_port     = 5423
     protocol    = "tcp"

@@ -1,5 +1,5 @@
 variable "vpc_id" {
-  type    = string
+  type        = string
   description = "vpc id that contains the RDS instance"
 }
 
@@ -10,68 +10,68 @@ variable "allocated_storage" {
 }
 
 variable "identifier" {
-  type    = string
+  type        = string
   description = "identifier for the RDS instance"
-  default = "mlflow-mysql"
+  default     = "mlflow-mysql"
 }
 
 variable "storage_type" {
-  type    = string
+  type        = string
   description = "storage type for the RDS instance"
-  default = "gp2"
+  default     = "gp2"
 }
 
 variable "engine" {
-  type    = string
+  type        = string
   description = "type of db engine for the RDS instance"
 }
 
 variable "engine_version" {
-  type    = string
+  type        = string
   description = "version for the engine chose for the RDS instance"
 }
 
 variable "instance_class" {
-  type    = string
+  type        = string
   description = "instance class for the RDS instance"
-  default = "db.t3.micro"
+  default     = "db.t3.micro"
 }
 
 variable "port" {
-  type    = number
+  type        = number
   description = "port for the RDS instance"
 }
 
 variable "username" {
-  type    = string
+  type        = string
   description = "admin username to access the RDS instance"
-  default = "admin"
+  default     = "admin"
 }
 
 variable "password" {
-  type    = string
+  type        = string
   description = "admin password to access the RDS instance"
-  default = "password"
+  default     = "password"
 }
 
 variable "db_name" {
-  type = string
+  type        = string
   description = "default name"
 }
 
 variable "db_subnet_group_name" {
-  type    = string
+  type        = string
   description = "subnet group id of the private subnets that contain the RDS instance"
 }
 
 variable "publicly_accessible" {
   description = "parameter to make public or not the RDS instance"
-  default = false
+  default     = false
 }
 
 variable "skip_final_snapshot" {
   description = "parameter to skip final snapshot or not from the RDS instance"
-  default = true
+  default     = true
 }
 
 variable "private_subnets_eks_cidr" {
