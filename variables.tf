@@ -24,13 +24,11 @@ variable "storage_type" {
 variable "engine" {
   type    = string
   description = "type of db engine for the RDS instance"
-  default = "mysql"
 }
 
 variable "engine_version" {
   type    = string
   description = "version for the engine chose for the RDS instance"
-  default = "8.0.27"
 }
 
 variable "instance_class" {
@@ -42,7 +40,6 @@ variable "instance_class" {
 variable "port" {
   type    = number
   description = "port for the RDS instance"
-  default = 3306
 }
 
 variable "username" {
@@ -60,7 +57,6 @@ variable "password" {
 variable "db_name" {
   type = string
   description = "default name"
-  default = "mlflow"
 }
 
 variable "db_subnet_group_name" {
